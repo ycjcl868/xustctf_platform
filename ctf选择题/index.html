@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>XUSTCTF选择题</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    .navbar{border-radius:0;}
+    ul{list-style: none;}
+    ul li{margin: 5px 0;}
+    ul li p{font-weight: bold;}
+    .flag{color:red;}
+    .radio-btn input[type="radio"], .check-box input[type="checkbox"] {
+    visibility: hidden;
+}
+p,span{-webkit-user-select: none;hutia:expression(this.onselectstart=function(){return(false)});}
+ .radio-btn {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    float: left;
+    cursor: pointer;
+    position: relative;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 1px #ccc;
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+}
+}
+}
+.checkedRadio {
+    -moz-box-shadow: inset 0 0 5px 1px #ccc;
+    -webkit-box-shadow: inset 0 0 5px 1px #ccc;
+    box-shadow: inset 0 0 5px 1px #ccc;
+}
+.radio-btn i {
+    border: 1px solid #E1E2E4;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+.checkedRadio i {
+    background-color: #898A8C;
+}
+.content-container{
+  width: 900px;
+  margin: 0 auto;
+}
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">XUSTCTF</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+          </div>
+        </div>
+  </nav>
+<div class="content-container" id="content-container">
+      <h3 class="text-center">
+        选择题
+      </h3>
+    <ul id="1">
+        <li>
+            <p>1、数字签名技术可以防止双方的抵赖和伪造，它可以用消息摘要方法MD来实现，也可以采用公钥体制的加解密方法。在采用公钥体制的加解密方法中，接受方若伪造，则可以（  ）检查。:</p>
+        </li>
+        <li choose="A"><input type="radio" name="radio-btn" /><span>A、发送方通过将伪造的数据用私钥加密和信道上加密的数据对比</span></li>
+        <li choose="B"><input type="radio" name="radio-btn" /><span>B、发送方通过将伪造的数据和信道上的加密数据被发送方的公钥解密后对比</span></li>
+        <li choose="C"><input type="radio" name="radio-btn" /><span>C、第三方通过将伪造的数据和信道上的加密数据被发送方的公钥解密后对比</span></li>
+        <li choose="D"><input type="radio" name="radio-btn" /><span>D、第三方通过将伪造的数据和信道上的加密数据被第三方的公钥解密后对比</span></li>
+
+        <li class="flag"></li>
+    </ul>
+    
+
+
+    <ul id="2">
+        <li>
+            <p>2、防火墙采用的最简单的技术是：</p>
+        </li>
+        <li choose="A"><input type="radio" name="radio-btn" /><span>A、安装保护卡</span></li>
+        <li choose="B"><input type="radio" name="radio-btn" /><span>B、隔离</span></li>
+        <li choose="C"><input type="radio" name="radio-btn" /><span>C、包过滤</span></li>
+        <li choose="D"><input type="radio" name="radio-btn" /><span>D、设置进入密码</span></li>
+
+        <li class="flag"></li>
+    </ul>
+
+
+    <ul id="3">
+        <li>
+            <p>3、通过截取以前的合法记录稍后重新加入一个连接，叫做重放攻击，为防止这种情况，可以采用的方法是（  ）</p>
+        </li>
+        <li choose="A"><input type="radio" name="radio-btn" /><span>A、加密</span></li>
+        <li choose="B"><input type="radio" name="radio-btn" /><span>B、加入时间戳</span></li>
+        <li choose="C"><input type="radio" name="radio-btn" /><span>C、认证</span></li>
+        <li choose="D"><input type="radio" name="radio-btn" /><span>D、使用密钥</span></li>
+
+        <li class="flag"></li>
+    </ul>
+
+
+    <ul id="4">
+        <li>
+            <p>4、关于消息摘要函数，叙述不正确的是（  ）</p>
+        </li>
+        <li choose="A"><input type="radio" name="radio-btn" /><span>A、输入任意大小的消息，输出是一个长度固定的摘要</span></li>
+        <li choose="B"><input type="radio" name="radio-btn" /><span>B、输入消息中的任何变动都会对输出摘要产生影响</span></li>
+        <li choose="C"><input type="radio" name="radio-btn" /><span>C、输入消息中的任何变动都不会对输出摘要产生影响</span></li>
+
+        <li class="flag"></li>
+    </ul>    
+
+
+    <ul id="5">
+        <li>
+            <p>5.如果使用凯撒密码，在密钥为4时attack的密文为(  )</p>
+        </li>
+        <li choose="A"><input type="radio" name="radio-btn" /><span>A、ATTACK</span></li>
+        <li choose="B"><input type="radio" name="radio-btn" /><span>B、DWWDFN</span></li>
+        <li choose="C"><input type="radio" name="radio-btn" /><span>C、EXXEGO</span></li>
+        <li choose="D"><input type="radio" name="radio-btn" /><span>D、FQQFAO</span></li>
+
+        <li class="flag"></li>
+    </ul>    
+
+
+    <ul id="6">
+        <li>
+            <p>6.RSA是一种基于（   ）原理的公钥加密算法</p>
+        </li>
+        <li choose="A"><input type="radio" name="radio-btn" /><span>A、大素数分解</span></li>
+        <li choose="B"><input type="radio" name="radio-btn" /><span>B、椭圆曲线</span></li>
+        <li choose="C"><input type="radio" name="radio-btn" /><span>C、背包问题</span></li>
+        <li choose="D"><input type="radio" name="radio-btn" /><span>D、离散对数</span></li>
+
+        <li class="flag"></li>
+    </ul>    
+
+    <ul id="7">
+        <li>
+            <p>7.对于IP地址为 202.93.120.6的主机来说，其网络号为（  ）</p>
+        </li>
+        <li choose="A"><input type="radio" name="radio-btn" /><span>A、202.93.120</span></li>
+        <li choose="B"><input type="radio" name="radio-btn" /><span>B、202.93.120.6</span></li>
+        <li choose="C"><input type="radio" name="radio-btn" /><span>C、202.93.120.0</span></li>
+
+        <li class="flag"></li>
+    </ul>   
+
+
+     <ul id="8">
+        <li>
+            <p>8.在下列那个网络拓扑结构中，中心结点的故障可能造成全网瘫痪的是（   ）</p>
+        </li>
+        <li choose="A"><input type="radio" name="radio-btn" /><span>A、星型拓扑结构</span></li>
+        <li choose="B"><input type="radio" name="radio-btn" /><span>B、环形拓扑结构</span></li>
+        <li choose="C"><input type="radio" name="radio-btn" /><span>C、树型拓扑结构</span></li>
+        <li choose="D"><input type="radio" name="radio-btn" /><span>D、网状拓扑结构</span></li>
+
+        <li class="flag"></li>
+    </ul>     
+
+
+    <ul id="9">
+        <li>
+            <p>9. WINDOWS主机推荐使用（  ）格式 </p>
+        </li>
+        <li choose="A"><input type="radio" name="radio-btn" /><span>A、NTFS</span></li>
+        <li choose="B"><input type="radio" name="radio-btn" /><span>B、FAT32</span></li>
+        <li choose="C"><input type="radio" name="radio-btn" /><span>C、FAT</span></li>
+        <li choose="D"><input type="radio" name="radio-btn" /><span>D、LINUX</span></li>
+
+        <li class="flag"></li>
+    </ul>    
+
+
+    <ul id="10">
+        <li>
+            <p>10.http://IP/scripts/..%255c..%255winnt/system32/cmd.exe?/c+del+c:\tanker.txt可以（   ）</p>
+        </li>
+        <li choose="A"><input type="radio" name="radio-btn" /><span>A、显示目标主机目录</span></li>
+        <li choose="B"><input type="radio" name="radio-btn" /><span>B、显示文件内容</span></li>
+        <li choose="C"><input type="radio" name="radio-btn" /><span>C、删除文件</span></li>
+        <li choose="D"><input type="radio" name="radio-btn" /><span>D、复制文件的同时将该文件改名</span></li>
+
+        <li class="flag"></li>
+    </ul>
+
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+
+
+      $(function(){
+        $('input[name="radio-btn"]').wrap('<div class="radio-btn"><i></i></div>');
+        $(".radio-btn").on('click', function () {
+            var _this = $(this),
+                block = _this.parent().parent();
+
+
+            var quesId  = $(this).parent().parent().attr("id");
+            var ans = $(this).parent().attr("choose");
+            if(_this.parent().parent().attr("check") == "false"){
+              alert("请5秒后再选择");
+              
+              setTimeout(function(){
+                _this.parent().parent().removeAttr("check");
+              },5000);  //5秒后再次选择
+              return;
+            }else{
+              $.post('check.php',{quesId:quesId,ans:ans},function(content){
+                var flag = content;
+                _this.parent().siblings('.flag').html(flag);
+                _this.parent().parent().attr("check","false");
+              });              
+            }
+
+
+            block.find('input:radio').attr('checked', false);
+            block.find(".radio-btn").removeClass('checkedRadio');
+            _this.addClass('checkedRadio');
+            _this.find('input:radio').attr('checked', true);
+
+
+
+        });
+      });
+
+
+    </script>
+  </body>
+</html>
